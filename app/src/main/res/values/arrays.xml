@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="expense_types">
+        <item>Café / Refrescos</item>
+        <item>Comida / Cena</item>
+        <item>Compra supermercado</item>
+        <item>Gasolina</item>
+        <item>Ropa</item>
+        <item>Compra por internet</item>
+        <item>Otros gastos</item>
+    </string-array>
+</resources>
