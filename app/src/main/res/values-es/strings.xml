@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Control de Gastos</string>
+    <string name="app_tytle">Control de Gastos Personales</string>
+    <string name="expense_amount">Importe</string>
+    <string name="expense_date">Fecha:</string>
+    <string name="expense_description">Descripción:</string>
+    <string name="expense_type">Tipo:</string>
+    <string name="loc_granted">Se ha obtenido la localización</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="expense_saved">Guardado en la base de datos</string>
+    <string name="attention">Atención</string>
+    <string name="expense_saved_error">Error al guardar en la base de datos</string>
+    <string name="no">No</string>
+    <string name="reset_confirmation">Se van a eliminar los valores introducidos. ¿Continuar?</string>
+    <string name="yes">Si</string>
+    <string name="get_all_expenses">SELECT * FROM EXPENSES</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spendings control</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_tytle">Personal Spendings Control </string>
+    <string name="expense_amount">Amount:</string>
+    <string name="expense_date">Date:</string>
+    <string name="expense_description">Description:</string>
+    <string name="expense_type">Type:</string>
+    <string name="loc_granted"> Location has been obtained</string>
+    <string name="expense_saved">Expense correcty saved</string>
+    <string name="attention">Alert</string>
+    <string name="expense_saved_error">Error saving data</string>
+    <string name="no">No</string>
+    <string name="reset_confirmation">All introduced data will be deleted. Continue?</string>
+    <string name="yes">Yes</string>
+    <string name="get_all_expenses">SELECT * FROM EXPENSES</string>
+</resources>

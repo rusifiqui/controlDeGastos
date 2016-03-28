@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="expense_types">
+    <item>Coffee / Drinks</item>
+    <item>Lunch / Dinner</item>
+    <item>Supermarket</item>
+    <item>Gas station</item>
+    <item>Clothes</item>
+    <item>e-Shop</item>
+    <item>Othes expenses</item>
+</string-array>
+</resources>
