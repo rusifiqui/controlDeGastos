@@ -202,8 +202,15 @@ public class MainActivity extends AppCompatActivity {
         newValues.put(ExpensesDatabaseHelper.KEY_DATE, editTextDate.getText().toString());
         newValues.put(ExpensesDatabaseHelper.KEY_DESCRIPTION, editTextDescription.getText().toString());
         newValues.put(ExpensesDatabaseHelper.KEY_ADDRESS, address);
+        if(db.insert(ExpensesDatabaseHelper.DATABASE_TABLE, null, newValues) == -1){
+            db.close();
+            return false;
+        }else{
+            db.close();
+            return true;
+        }
 
-        return db.insert(ExpensesDatabaseHelper.DATABASE_TABLE, null, newValues) != -1;
+
     }
 
     /**
