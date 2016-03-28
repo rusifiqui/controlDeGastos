@@ -2,8 +2,10 @@ package jvilam.com.controldegastos;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import jvilam.com.controldegastos.Helpers.ExpensesDatabaseHelper;
@@ -21,6 +23,15 @@ public class ExpensesActivity extends AppCompatActivity {
         expenses = (TextView) findViewById(R.id.textViewExpenses);
         expenses.setText("");
         queryExpenses();
+
+        // Botón "Volver"
+        FloatingActionButton backFab = (FloatingActionButton) findViewById(R.id.expenses_back_fab);
+        backFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     protected void queryExpenses(){

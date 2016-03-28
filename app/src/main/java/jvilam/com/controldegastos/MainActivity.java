@@ -3,6 +3,7 @@ package jvilam.com.controldegastos;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -25,11 +26,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
@@ -67,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Variables de la interfaz
+        ImageButton dateImageButton = (ImageButton) findViewById(R.id.imageButtonDate);
         spinnerExpenseType = (Spinner) findViewById(R.id.spinnerType);
         editTextAmount = (EditText) findViewById(R.id.editTextAmount);
         editTextDate = (EditText) findViewById(R.id.editTextDate);
@@ -127,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ExpensesActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -139,6 +145,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // Fin botones flotantes
+
+        // Listeners selectores
+        dateImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDatePicker();
+            }
+        });
+        // Fin Listeners selectores
+
     }
 
     @Override
@@ -155,8 +171,10 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
             return true;
         }
 
@@ -245,5 +263,24 @@ public class MainActivity extends AppCompatActivity {
         editTextAmount.setText("");
         editTextDescription.setText("");
         saveToDatabaseFab.setEnabled(true);
+    }
+
+    /**
+     * Método que muestra una ventana para seleccionar la fecha del gasto y modifica la actual por la seleccionada
+     */
+    private void getDatePicker(){
+        Calendar calendar = Calendar.getInstance();
+        final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                System.out.println(dateFormatter.format(newDate.getTime()));
+                editTextDate.setText(dateFormatter.format(newDate.getTime()));
+            }
+
+        }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+        datePickerDialog.show();
     }
 }

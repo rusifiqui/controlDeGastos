@@ -2,19 +2,25 @@
     <string name="app_name">Control de Gastos</string>
     <string name="app_tytle">Control de Gastos Personales</string>
     <string name="action_settings">Settings</string>
+    <string name="expenses">Gastos</string>
     <string name="expense_type">Tipo: </string>
     <string name="expense_amount">Importe: </string>
     <string name="expense_date">Fecha: </string>
     <string name="expense_description">Descripción: </string>
+    <string name="delete_database">Eliminar datos</string>
 
+    <!-- Notificaciones -->
     <string name="loc_granted">Se ha obtenido la localización</string>
     <string name="expense_saved">Guardado en la base de datos</string>
     <string name="expense_saved_error">Error al guardar en la base de datos</string>
+    <string name="data_deleted">Se ha eliminado la información</string>
+    <string name="data_deleted_error">Error al eliminar la información</string>
 
+    <!-- Diálogos -->
     <string name="reset_confirmation">Se van a eliminar los valores introducidos. ¿Continuar?</string>
+    <string name="delete_confirmation">Se van a eliminar los datos almacenados en la aplicación. ¿Continuar?</string>
     <string name="attention">Atención</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
-
 
 </resources>

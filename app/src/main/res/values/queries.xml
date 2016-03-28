@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="get_all_expenses">SELECT * FROM EXPENSES</string>
-</resources>

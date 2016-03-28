@@ -14,5 +14,9 @@
     <string name="no">No</string>
     <string name="reset_confirmation">Se van a eliminar los valores introducidos. ¿Continuar?</string>
     <string name="yes">Si</string>
-    <string name="get_all_expenses">SELECT * FROM EXPENSES</string>
+    <string name="delete_database">Eliminar datos</string>
+    <string name="data_deleted">Se ha eliminado la información</string>
+    <string name="data_deleted_error">Error al eliminar la información</string>
+    <string name="delete_confirmation">Se van a eliminar los datos almacenados en la aplicación. ¿Continuar?</string>
+    <string name="expenses">Gastos</string>
 </resources>

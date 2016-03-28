@@ -9,10 +9,14 @@
     <string name="expense_type">Type:</string>
     <string name="loc_granted"> Location has been obtained</string>
     <string name="expense_saved">Expense correcty saved</string>
-    <string name="attention">Alert</string>
+    <string name="attention">Attention</string>
     <string name="expense_saved_error">Error saving data</string>
     <string name="no">No</string>
     <string name="reset_confirmation">All introduced data will be deleted. Continue?</string>
     <string name="yes">Yes</string>
-    <string name="get_all_expenses">SELECT * FROM EXPENSES</string>
+    <string name="delete_database">Delete all data</string>
+    <string name="data_deleted">All data has been deleted</string>
+    <string name="data_deleted_error">An error occurred when deleting information</string>
+    <string name="delete_confirmation">All data will be deleted. Continue?</string>
+    <string name="expenses">Expenses</string>
 </resources>
